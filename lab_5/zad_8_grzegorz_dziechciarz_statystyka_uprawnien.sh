@@ -1,0 +1,1 @@
+ls $1 -alR | awk -F" " '{print $1}'| grep "^[b,c,d,p,f,l,s,-]" | sort | uniq -c | awk '$1 != 1' | sort
