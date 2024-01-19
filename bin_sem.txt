@@ -1,0 +1,20 @@
+#include <semaphore.h>
+
+sem_t semaphore;
+
+void* my_thread(void* args) {
+	sem_wait(&semaphore); // waits if 0 runs if 1 and decrements it
+	
+	// code
+	
+	sem_post(&semaphore); // adds 1 to semaphore
+}
+
+int main() {
+	sem_init(&semaphore, <0 if 1 proccess>, <init_val>);
+	
+	sem_destroy(&semaphore)
+	return 0;
+}
+
+// works kinda like mutex
